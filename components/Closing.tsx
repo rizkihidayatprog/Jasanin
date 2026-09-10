@@ -1,3 +1,4 @@
+import { MapPin, Clock, Phone } from "lucide-react";
 import { BRAND, TAGLINE, WA_DISPLAY, waLink } from "@/lib/site";
 import VisitBadge from "@/components/VisitBadge";
 
@@ -39,9 +40,17 @@ export function Footer() {
             {BRAND}
           </p>
           <p className="mt-2 font-medium">{TAGLINE}.</p>
-          <p className="mt-3 text-sm font-bold">📍 Melayani seluruh Indonesia</p>
-          <p className="mt-1 text-sm font-bold">🕘 Senin–Sabtu, 09.00–17.00 WIB</p>
-          <p className="mt-1 text-sm font-bold">📱 {WA_DISPLAY}</p>
+          <p className="mt-3 flex items-center gap-2 text-sm font-bold">
+            <MapPin className="h-4 w-4 shrink-0" strokeWidth={3} /> Melayani
+            seluruh Indonesia
+          </p>
+          <p className="mt-1 flex items-center gap-2 text-sm font-bold">
+            <Clock className="h-4 w-4 shrink-0" strokeWidth={3} /> Senin–Sabtu,
+            09.00–17.00 WIB
+          </p>
+          <p className="mt-1 flex items-center gap-2 text-sm font-bold">
+            <Phone className="h-4 w-4 shrink-0" strokeWidth={3} /> {WA_DISPLAY}
+          </p>
         </div>
         <nav className="flex flex-col gap-2 font-bold">
           <a href="#paket" className="hover:underline">Paket</a>
