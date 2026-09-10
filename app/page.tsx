@@ -11,7 +11,7 @@ import { RevealInit } from "@/components/Reveal";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main id="konten" className="min-h-screen">
       <RevealInit />
       <Navbar />
       <Hero />

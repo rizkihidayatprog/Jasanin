@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import Analytics from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     title: "JASANIN — Website Profesional untuk UMKM",
     description:
       "Website profesional nggak harus mahal. Mulai dari Rp350 ribu.",
+    url: "/",
     type: "website",
     locale: "id_ID",
     images: [
@@ -54,6 +55,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#FFDE1A",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -62,6 +69,12 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${display.variable} ${body.variable}`}>
       <body className="min-h-screen bg-[#F5F5F0] text-black antialiased">
+        <a
+          href="#konten"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:border-[3px] focus:border-black focus:bg-[#FFDE1A] focus:px-4 focus:py-2 focus:font-bold"
+        >
+          Lewati ke konten
+        </a>
         <Analytics />
         <JsonLd />
         {children}

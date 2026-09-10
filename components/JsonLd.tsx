@@ -1,6 +1,11 @@
-import { FAQS } from "@/lib/site";
+import { FAQS, PACKAGES } from "@/lib/site";
 
 const BASE = "https://jasanin.netlify.app";
+
+function priceValue(price: string): number | null {
+  const digits = price.replace(/[^0-9]/g, "");
+  return digits ? Number(digits) : null;
+}
 
 export default function JsonLd() {
   const faqSchema = {
@@ -30,6 +35,39 @@ export default function JsonLd() {
     sameAs: [],
   };
 
+  const productsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Paket Jasa Pembuatan Website Jasanin",
+    itemListElement: PACKAGES.map((p, i) => {
+      const value = priceValue(p.price);
+      return {
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Product",
+          name: `Jasanin ${p.name} — ${p.tagline}`,
+          description: [...p.highlights, ...p.features]
+            .filter((f, idx, arr) => arr.indexOf(f) === idx)
+            .slice(0, 12)
+            .join(", "),
+          brand: { "@type": "Brand", name: "Jasanin" },
+          ...(value
+            ? {
+                offers: {
+                  "@type": "Offer",
+                  priceCurrency: "IDR",
+                  price: value,
+                  availability: "https://schema.org/InStock",
+                  url: `${BASE}/#paket`,
+                },
+              }
+            : {}),
+        },
+      };
+    }),
+  };
+
   return (
     <>
       <script
@@ -39,6 +77,10 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productsSchema) }}
       />
     </>
   );
