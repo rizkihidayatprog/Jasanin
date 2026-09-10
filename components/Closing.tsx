@@ -1,4 +1,5 @@
 import { BRAND, TAGLINE, WA_DISPLAY, waLink } from "@/lib/site";
+import VisitBadge from "@/components/VisitBadge";
 
 export function FinalCta() {
   return (
@@ -63,6 +64,7 @@ export function Footer() {
           <p className="mt-3 text-sm font-medium text-gray-600">
             © {new Date().getFullYear()} Jasanin. Website profesional untuk UMKM.
           </p>
+          <VisitBadge />
         </div>
       </div>
     </footer>
