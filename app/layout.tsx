@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import Analytics from "@/components/Analytics";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${display.variable} ${body.variable}`}>
       <body className="min-h-screen bg-[#F5F5F0] text-black antialiased">
+        <Analytics />
         {children}
       </body>
     </html>

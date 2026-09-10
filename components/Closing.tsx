@@ -38,6 +38,9 @@ export function Footer() {
             {BRAND}
           </p>
           <p className="mt-2 font-medium">{TAGLINE}.</p>
+          <p className="mt-3 text-sm font-bold">📍 Melayani seluruh Indonesia</p>
+          <p className="mt-1 text-sm font-bold">🕘 Senin–Sabtu, 09.00–17.00 WIB</p>
+          <p className="mt-1 text-sm font-bold">📱 {WA_DISPLAY}</p>
         </div>
         <nav className="flex flex-col gap-2 font-bold">
           <a href="#paket" className="hover:underline">Paket</a>
