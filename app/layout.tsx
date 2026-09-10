@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     "Jasanin bantu UMKM punya website profesional, siap online, dan nggak bikin kantong jebol. Mulai dari Rp350 ribu. Pilih sesuai kebutuhan bisnis kamu.",
   keywords: ["jasa pembuatan website", "website UMKM", "jasanin", "website murah"],
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "JASANIN — Website Profesional untuk UMKM",
     description:
