@@ -73,7 +73,7 @@ export function FloatingWA() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat Jasanin via WhatsApp"
-      className="brutal-btn fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-[#25D366] py-2.5 pl-3 pr-4 font-display text-sm font-bold text-white"
+      className="brutal-btn fixed bottom-4 left-4 z-50 flex items-center gap-2 rounded-full bg-[#25D366] py-2.5 pl-3 pr-4 font-display text-sm font-bold text-white"
     >
       <svg
         viewBox="0 0 24 24"
