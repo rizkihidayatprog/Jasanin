@@ -136,7 +136,8 @@ export default function Pricing() {
         ))}
         <p className="reveal mt-6 text-sm font-medium text-gray-600">
           * Domain & hosting tahun berikutnya diperpanjang terpisah sesuai biaya
-          yang berlaku. Semua paket mobile-friendly + basic SEO.
+          yang berlaku. Semua paket jasa bikin website ini mobile-friendly +
+          basic SEO.
         </p>
       </div>
     </section>

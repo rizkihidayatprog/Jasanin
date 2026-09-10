@@ -20,6 +20,10 @@ export default function Hero() {
             Jasanin bantu UMKM punya website profesional, siap online, dan
             nggak bikin kantong jebol.
           </p>
+          <p className="mt-2 max-w-md text-sm font-medium text-gray-600">
+            Jasa pembuatan website untuk UMKM di Yogyakarta — company profile,
+            toko online, hingga website custom (POS, payment gateway, database).
+          </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <a
               href={waLink()}

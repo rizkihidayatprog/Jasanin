@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import Analytics from "@/components/Analytics";
+import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -28,6 +29,21 @@ export const metadata: Metadata = {
       "Website profesional nggak harus mahal. Mulai dari Rp350 ribu.",
     type: "website",
     locale: "id_ID",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jasanin — Jasa Pembuatan Website untuk UMKM, Mulai Rp350rb",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JASANIN — Website Profesional untuk UMKM",
+    description:
+      "Website profesional nggak harus mahal. Mulai dari Rp350 ribu.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -40,6 +56,7 @@ export default function RootLayout({
     <html lang="id" className={`${display.variable} ${body.variable}`}>
       <body className="min-h-screen bg-[#F5F5F0] text-black antialiased">
         <Analytics />
+        <JsonLd />
         {children}
       </body>
     </html>

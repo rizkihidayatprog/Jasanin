@@ -9,7 +9,8 @@ export default function Portfolio() {
           LIHAT YANG SUDAH KAMI BUAT.
         </h2>
         <p className="reveal mt-2 font-medium text-gray-600">
-          Klik kartu untuk buka website aslinya.
+          Contoh hasil jasa pembuatan website Jasanin — klik kartu untuk buka
+          website aslinya.
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PORTFOLIO.map((p) => (
@@ -23,7 +24,7 @@ export default function Portfolio() {
               <div className="relative aspect-[4/3] border-b-[3px] border-black">
                 <Image
                   src={p.image}
-                  alt={`Screenshot website ${p.name}`}
+                  alt={`Hasil jasa bikin website ${p.name} — ${p.type} oleh Jasanin`}
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
