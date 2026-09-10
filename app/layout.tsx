@@ -15,10 +15,12 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jasanin.netlify.app"),
   title: "JASANIN — Website Profesional untuk UMKM, Mulai Rp350rb",
   description:
     "Jasanin bantu UMKM punya website profesional, siap online, dan nggak bikin kantong jebol. Mulai dari Rp350 ribu. Pilih sesuai kebutuhan bisnis kamu.",
   keywords: ["jasa pembuatan website", "website UMKM", "jasanin", "website murah"],
+  alternates: { canonical: "/" },
   openGraph: {
     title: "JASANIN — Website Profesional untuk UMKM",
     description:
